@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fbe6f1;
+    font-family: "Dancing Script", cursive;
+}
+
+.envelope {
+    position: relative;
+    width: 280px;
+    height: 200px;
+}
+
+.pocket {
+    width: 0;
+    height: 0;
+    border-left: 140px solid #f5a3a2;
+    border-right: 140px solid #f5a3a2;
+    border-bottom: 100px solid #d23f57;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.letter {
+    position: absolute;
+    background-color: #fff;
+    width: 90%;
+    height: 90%;
+    top: 10px;
+    left: 5%;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.heart {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 80%, 25% 100%, 0% 35%);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #d23f57;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
