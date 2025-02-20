@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Animada</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fce4ec;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        .envelope {
+            width: 250px;
+            height: 150px;
+            background: #f48fb1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s ease-in-out;
+        }
+        .letter {
+            position: absolute;
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 8px;
+            overflow-y: auto; /* Permite el desplazamiento vertical */
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: max-height 0.5s ease-in-out;
+            max-height: 300px; /* Ajusta esta altura según tus necesidades */
+        }
+        .open {
+            max-height: 800px; /* Ajusta este valor si es necesario */
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            background: #e91e63;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="envelope" id="envelope">
+            <div class="letter" id="letter">
+                <h2>To: Crush</h2>
+                <p>Querido amor, eres tan hermoso/a</p>
+                <p>Que cada vez que te veo</p>
+                <p>Mi mundo se detiene.</p>
+                <video width="100%" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+                <h2>Poema: Eres mi universo</h2>
+                <p>Antes de verte, ya sabía,<br>
+                que en tu mirada encontraría,<br>
+                el brillo hermoso y celestial,<br>
+                un dulce universo por explorar.</p>
+                <p>Tu piel, blanca como la nieve,<br>
+                suave como un susurro leve.<br>
+                Tu cabello, fuego encendido,<br>
+                llama ardiente en mi latido.</p>
+                <p>Quisiera llevarte hasta la luna,<br>
+                bailar contigo entre las estrellas,<br>
+                mostrarte colores que aún no existen,<br>
+                y abrazarte en tierras nuevas.</p>
+                <p>Déjame ser el amor más bonito,<br>
+                llenarte de alegría infinita,<br>
+                ser tu razón en días grises,<br>
+                tu rayo de sol, tu sonrisa bendita.</p>
+                <p>Porque en este mundo inmenso y frío,<br>
+                tú eres mi calor, mi único abrigo.</p>
+                <video width="100%" controls>
+                    <source src="video2.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+                <h3>Estas son una canciones que te dedico corazon</h3>
+                <p>Que bonito es querer</p>
+                <video width="100%" controls>
+                    <source src="video3.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+                <p>Yo quisiera</p>
+                <video width="100%" controls>
+                    <source src="video4.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+        </div>
+        <button id="openBtn">ABRIR</button>
+        <button id="closeBtn">CERRAR</button>
+    </div>
+    <script>
+        const openBtn = document.getElementById("openBtn");
+        const closeBtn = document.getElementById("closeBtn");
+        const letter = document.getElementById("letter");
+
+        openBtn.addEventListener("click", () => {
+            letter.classList.add("open");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            letter.classList.remove("open");
+        });
+    </script>
+</body>
+</html>
